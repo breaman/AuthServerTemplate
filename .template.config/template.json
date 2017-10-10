@@ -6,7 +6,6 @@
     ],
     "name": "Breaman IdentityServer Template",
     "identity": "Breaman.Templates.IdentityServer",
-    "groupIdentity": "Breaman.Templates",
     "shortName": "breamanIdentityServer",
     "tags": {
         "language": "C#",

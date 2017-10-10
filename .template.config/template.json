@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Michael Stokesbary",
+    "classifications": [
+        "Web", "Identity", "IdentityServer"
+    ],
+    "name": "Breaman IdentityServer Template",
+    "identity": "Breaman.Templates.IdentityServer",
+    "groupIdentity": "Breaman.Templates",
+    "shortName": "breamanIdentityServer",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "AuthServerTemplate",
+    "preferNameDirectory": true,
+    "sources":[{
+        "modifiers": [{
+            "exclude": ["Readme.md", "**/*.sqlite", "**/obj/**/*", "**/bin/**/*", "**/node_modules/**/*", "**/dist/**/*", "**/.git/**/*"]
+        }]
+    }]
+}

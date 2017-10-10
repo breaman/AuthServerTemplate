@@ -19,7 +19,8 @@ namespace AuthServerTemplate.Web.Attributes
                     context.HttpContext.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
                 }
 
-                var csp = "default-src 'self';";
+                var csp = "default-src 'self'; font-src 'self' https://ajax.aspnetcdn.com data:; style-src 'self' https://ajax.aspnetcdn.com 'unsafe-inline'; script-src 'self' https://ajax.aspnetcdn.com 'unsafe-inline'";
+                //var csp = "default-src 'self';";
 
                 // once for standards compliant browsers
                 if (!context.HttpContext.Response.Headers.ContainsKey("Content-Security-Policy"))

@@ -152,6 +152,8 @@ namespace AuthServerTemplate.Web.Controllers
             return actionResult;
         }
 
+        [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> LoginWithRecoveryCode(string returnUrl = null)
         {
             // Ensure the user has gone through the username & password screen first
@@ -166,6 +168,9 @@ namespace AuthServerTemplate.Web.Controllers
             return View();
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> LoginWithRecoveryCode(LoginWithRecoveryCodeViewModel model, string returnUrl = null)
         {
             IActionResult actionResult = View(model);
@@ -217,6 +222,9 @@ namespace AuthServerTemplate.Web.Controllers
             return View();
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
             ViewBag.ReturnUrl = returnUrl;

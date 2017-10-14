@@ -5,8 +5,11 @@ dotnet new -i <parentDirectoryProjectWasClonedTo>\AuthServerTemplate
 
 To generate a new project based on the template, from a command prompt type
 ```
-dotnet new breamanAuthServer -n <projectName>
+dotnet new breamanIdentityServer -n <projectName>
 ```
+
+If your project name has a '.' in it, you will need to do perform a search and replace on files to remove the '_' (underscore) that replaces the '.' (period) reported in this issue https://github.com/aspnet/JavaScriptServices/issues/1225
+
 
 To uninstall this template, open a command prompt and type
 ```

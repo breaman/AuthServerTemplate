@@ -58,7 +58,7 @@ namespace AuthServerTemplate.Web.Services
             var vm = new LoggedOutViewModel
             {
                 AutomaticRedirectAfterSignOut = AccountOptions.AutomaticRedirectAfterSignOut,
-                PostLogoutRedirectUrl = logout?.PostLogoutRedirectUri,
+                PostLogoutRedirectUri = logout?.PostLogoutRedirectUri,
                 ClientName = logout?.ClientId,
                 SignOutIframeUrl = logout?.SignOutIFrameUrl,
                 LogoutId = logoutId

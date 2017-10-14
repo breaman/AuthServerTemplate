@@ -39,6 +39,19 @@ namespace AuthServerTemplate.Web
 
             services.AddMvc();
 
+            // would want to lock this down if you want to limit what clients can auth against this instance of the identity server
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder
+                            .AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
+
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddConfigurationStore(options => 
@@ -67,6 +80,8 @@ namespace AuthServerTemplate.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseCors("AllowAllOrigins");
 
             app.UseStaticFiles();
 
